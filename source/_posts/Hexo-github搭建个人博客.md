@@ -1,7 +1,7 @@
 ---
 title: Hexo+github+git搭建个人博客
 date: 2018-03-02 01:28:48
-tags: hexo github git 博客搭建
+tags: hexo github
 ---
 捣鼓了半天，终于搭好了博客，换好了皮肤，要开始没羞没臊的博客生活了~
 **注意：此篇教程使用gitbase+git命令来操作，小伙伴们使用自带的IDE简化操作流程也是可以的，并且系统中要配置Node.js。**

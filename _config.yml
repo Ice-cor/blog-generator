@@ -82,3 +82,8 @@ theme: kiddochan
 deploy:
   type: git
   repo: git@github.com:Ice-cor/Ice-cor.github.io.git
+
+#临时解决table会有一大段空白的bug
+# marked:
+#   gfm: true
+#   breaks: false
