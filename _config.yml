@@ -7,7 +7,7 @@ title: 钟文钦的博客
 subtitle:
 description:
 author: 钟文钦
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -76,6 +76,7 @@ pagination_dir: page
 # theme: hexo-theme-aiki
 # theme: coney
 theme: kiddochan
+# theme: hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
