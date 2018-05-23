@@ -155,7 +155,7 @@ obj.foo存储了foo函数的地址，调用时为隐式调用，this指向的就
 
 ```javascript
     function foo(a){
-        this.a = 2
+        this.a = a
     }
     
     var bar = new foo(2)
@@ -168,4 +168,30 @@ obj.foo存储了foo函数的地址，调用时为隐式调用，this指向的就
 2. 如果通过call()、apply()进行显示绑定的，则this指向方法第一个传入的参数。
 3. 如果为在对象中调用，则为隐式绑定，this指向的是最后一层的调用对象。
 4. 如果是独立调用函数，则this指向全局对象。
+
+## 特殊情况
+
+以上几种this绑定，都是正常函数被调用下所能确定的。
+
+```javascript
+element.onclick = function(){
+    console.log(this) //??
+}
+
+element.addEventListener('click',function(){
+    console.log(this) //??
+})
+
+$('ul').on('click','li',function(){
+    console.log(this) //?
+})
+```
+
+这几组代码，函数调用被隐藏起来了，只知道是何时被调用的，但怎么调用不得而知，因为这得去看源码才能了解细节。
+
+那如何知道this指向呢？
+
+其实MDN文档已经明确的指出来了，js的事件触发及事件监听，函数内的this指向的是所触发事件的元素。element元素触发的事件，那么this指向的就是element。
+
+jQuery呢，因为没有去看源码，所以也不知道。不过jQuery文档也有给出答案，如果是单纯的事件监听，那么就是触发监听的元素，即ul；如果是事件委托，则与selector相匹配的元素，即li。
 
