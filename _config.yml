@@ -6,8 +6,9 @@
 title: 钟文钦的博客
 subtitle:
 description:
+keywords:
 author: 钟文钦
-language: zh-Hans
+language:
 timezone:
 
 # URL
@@ -72,19 +73,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: landscape
-# theme: hexo-theme-aiki
-# theme: coney
-theme: kiddochan
-# theme: hexo-theme-next
+theme: fexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:Ice-cor/Ice-cor.github.io.git
-
-#临时解决table会有一大段空白的bug
-# marked:
-#   gfm: true
-#   breaks: false
